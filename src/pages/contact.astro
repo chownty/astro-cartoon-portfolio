@@ -40,38 +40,44 @@ import { siteConfig } from "../config/site";
           <div class="contact-card contact-card-animate">
             <h2 class="contact-card-title">Contact Info</h2>
             <div class="contact-info-list">
-              <div class="contact-info-item">
-                <div class="contact-icon-wrapper email-icon">
-                  <img src="/svg/email.svg" alt="email icon" class="contact-icon" />
+              {siteConfig.contact.info.email && (
+                <div class="contact-info-item">
+                  <div class="contact-icon-wrapper email-icon">
+                    <img src="/svg/email.svg" alt="email icon" class="contact-icon" />
+                  </div>
+                  <div class="contact-info-content">
+                    <div class="contact-info-label">{siteConfig.contact.info.email.label}</div>
+                    <a href={siteConfig.contact.info.email.link} class="contact-info-value">{siteConfig.contact.info.email.value}</a>
+                  </div>
                 </div>
-                <div class="contact-info-content">
-                  <div class="contact-info-label">{siteConfig.contact.info.email.label}</div>
-                  <a href={siteConfig.contact.info.email.link} class="contact-info-value">{siteConfig.contact.info.email.value}</a>
-                </div>
-              </div>
+              )}
 
-              <div class="contact-info-item">
-                <div class="contact-icon-wrapper phone-icon">
-                  <img src="/svg/phone.svg" alt="phone icon" class="contact-icon" />
+              {siteConfig.contact.info.phone && (
+                <div class="contact-info-item">
+                  <div class="contact-icon-wrapper phone-icon">
+                    <img src="/svg/phone.svg" alt="phone icon" class="contact-icon" />
+                  </div>
+                  <div class="contact-info-content">
+                    <div class="contact-info-label">{siteConfig.contact.info.phone.label}</div>
+                    <a href={siteConfig.contact.info.phone.link} class="contact-info-value">{siteConfig.contact.info.phone.value}</a>
+                  </div>
                 </div>
-                <div class="contact-info-content">
-                  <div class="contact-info-label">{siteConfig.contact.info.phone.label}</div>
-                  <a href={siteConfig.contact.info.phone.link} class="contact-info-value">{siteConfig.contact.info.phone.value}</a>
-                </div>
-              </div>
+              )}
 
-              <div class="contact-info-item">
-                <div class="contact-icon-wrapper location-icon">
-                  <img src="/svg/location.svg" alt="location icon" class="contact-icon" />
+              {siteConfig.contact.info.location && (
+                <div class="contact-info-item">
+                  <div class="contact-icon-wrapper location-icon">
+                    <img src="/svg/location.svg" alt="location icon" class="contact-icon" />
+                  </div>
+                  <div class="contact-info-content">
+                    <div class="contact-info-label">{siteConfig.contact.info.location.label}</div>
+                    <div class="contact-info-value">{siteConfig.contact.info.location.value}</div>
+                  </div>
                 </div>
-                <div class="contact-info-content">
-                  <div class="contact-info-label">{siteConfig.contact.info.location.label}</div>
-                  <div class="contact-info-value">{siteConfig.contact.info.location.value}</div>
-                </div>
-              </div>
+              )}
             </div>
-            <div class="contact-message-button-wrapper">
-              <a href="/comments" class="contact-message-button">{siteConfig.contact.messageButton}</a>
+            <div class="contact-message-button-wrapper" style="display: none;">
+              <!-- Message button removed -->
             </div>
           </div>
 
@@ -88,7 +94,7 @@ import { siteConfig } from "../config/site";
           </div>
         </div>
 
-        <div class="contact-footer-text comments-content-animate">
+        <div class="contact-footer-text contact-footer-animate">
           {siteConfig.contact.footerText.map((text) => (
             <p>{text}</p>
           ))}

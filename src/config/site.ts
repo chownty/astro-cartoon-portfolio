@@ -1,40 +1,36 @@
 // Site-wide configuration
 export const siteConfig = {
   // Site metadata
-  name: "Astro Blog",
-  title: "Astro Blog",
-  description: "A modern blog built with Astro",
+  name: "Tom Yao",
+  title: "Tom Yao Portfolio",
+  description: "Tom Yao's personal portfolio and blog.",
   
   // Navigation
   navigation: {
     home: "Home",
     posts: "Posts",
     contact: "Contact",
-    comments: "Comments",
   },
   
   // Hero Section
   hero: {
     prefix: "I am",
-    name: "Someone Name",
-    intro: "I am a web developer and blogger, passionate about sharing knowledge and building cool things with code.\nWelcome to my portfolio blog!",
+    name: "Tom Yao",
+    intro: "I am a Full Stack Developer, passionate about sharing knowledge and building cool things with code.\nWelcome to my portfolio blog!",
     avatar: "/image/20943608.jpeg",
     buttons: {
       viewPosts: "View Posts",
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-      { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-      { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-      { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+      { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/chownty" },
     ],
   },
   
   // About Section
   about: {
     title: "About Me",
-    text: "Hi, I'm Someone, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you'll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.",
+    text: "Hi, I'm Tom Yao, a passionate Full Stack Developer. I love exploring new technologies and sharing knowledge with the community. On this blog, you'll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.",
   },
   
   // Contact Page
@@ -44,14 +40,14 @@ export const siteConfig = {
     info: {
       email: {
         label: "Email",
-        value: "tom@example.com",
-        link: "mailto:tom@example.com",
+        value: "chownty@gmail.com",
+        link: "mailto:chownty@gmail.com",
       },
-      phone: {
-        label: "Phone",
-        value: "+1 (234) 567-890",
-        link: "tel:+1 (234) 567-890",
-      },
+      // phone: {
+      //   label: "Phone",
+      //   value: "+1 (234) 567-890",
+      //   link: "tel:+1 (234) 567-890",
+      // },
       location: {
         label: "Location",
         value: "San Francisco, CA",
@@ -60,22 +56,18 @@ export const siteConfig = {
     followMe: {
       title: "Follow Me",
       links: [
-        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
-        { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/astrodotbuild" },
-        { name: "Facebook", icon: "/svg/facebook.svg", url: "https://www.facebook.com/astrodotbuild" },
-        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
+        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/chownty" },
       ],
     },
     footerText: [
       "I typically respond to messages within 24 hours during business days.",
       "Looking forward to hearing from you! 🚀",
     ],
-    messageButton: "💬 Leave a Message",
   },
   
   // Footer
   footer: {
-    copyright: "© 2025 Someone. All rights reserved.",
+    copyright: "© 2026 Tom Yao. All rights reserved.",
     links: [
       { text: "Privacy Policy", url: "#" },
       { text: "Terms of Service", url: "#" },
@@ -92,23 +84,6 @@ export const siteConfig = {
     title: "Blog Posts",
     subtitle: "Explore our latest articles on web development, design, and technology",
     searchPlaceholder: "Search posts...",
-  },
-  
-  // Comments Page
-  comments: {
-    title: "Comments & Discussion",
-    subtitle: "Share your thoughts, questions, or suggestions here. Let's connect and discuss!",
-    guidelines: {
-      title: "Community Guidelines",
-      items: [
-        "Be respectful and constructive in your comments",
-        "No spam, self-promotion, or advertising allowed",
-        "No personal attacks, hate speech, or harassment",
-        "Stay on topic and keep discussions relevant",
-        "No inappropriate, offensive, or illegal content",
-        "Use clear, friendly, and inclusive language",
-      ],
-    },
   },
 };
 

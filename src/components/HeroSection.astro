@@ -1,5 +1,6 @@
 ---
 import { Fragment } from "astro/jsx-runtime";
+import { Image } from "astro:assets";
 import { siteConfig } from "../config/site";
 ---
 
@@ -9,26 +10,48 @@ import { siteConfig } from "../config/site";
       <p class="hero-normal-text">{siteConfig.hero.prefix}</p>
       <h1 class="hero-big-text">{siteConfig.hero.name}</h1>
       <p class="hero-intro-text">
-        {siteConfig.hero.intro.split('\n').map((line, i, arr) => (
-          <Fragment>
-            {line}
-            {i < arr.length - 1 && <br />}
-          </Fragment>
-        ))}
+        {
+          siteConfig.hero.intro.split("\n").map((line, i, arr) => (
+            <Fragment>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </Fragment>
+          ))
+        }
       </p>
       <div class="hero-btn-row">
-        <a href="/posts" class="hero-btn">{siteConfig.hero.buttons.viewPosts}</a>
-        <a href="/contact" class="hero-btn-alt">{siteConfig.hero.buttons.contactMe}</a>
+        <a href="/posts" class="hero-btn">{siteConfig.hero.buttons.viewPosts}</a
+        >
+        <a href="/contact" class="hero-btn-alt"
+          >{siteConfig.hero.buttons.contactMe}</a
+        >
       </div>
     </div>
     <div class="hero-right-col">
-      <img src={siteConfig.hero.avatar} alt="avatar" class="hero-avatar hero-avatar-animate" />
+      <Image
+        src={siteConfig.hero.avatar}
+        alt="avatar"
+        class="hero-avatar hero-avatar-animate"
+        width={320}
+        height={320}
+      />
       <div class="social-list">
-        {siteConfig.hero.socialLinks.map((social) => (
-          <a href={social.url} class="social-icon-btn social-icon-animate" aria-label={social.name}>
-            <img src={social.icon} alt={social.name.toLowerCase()} />
-          </a>
-        ))}
+        {
+          siteConfig.hero.socialLinks.map((social) => (
+            <a
+              href={social.url}
+              class="social-icon-btn social-icon-animate"
+              aria-label={social.name}
+            >
+              <Image
+                src={social.icon}
+                alt={social.name.toLowerCase()}
+                width={320}
+                height={320}
+              />
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -36,38 +59,37 @@ import { siteConfig } from "../config/site";
 
 <script>
   // Initialize page transition animations
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Trigger page content animation
-    const pageContent = document.querySelector('.page-content');
+    const pageContent = document.querySelector(".page-content");
     if (pageContent) {
       requestAnimationFrame(() => {
-        pageContent.classList.add('visible');
+        pageContent.classList.add("visible");
       });
     }
 
     // Trigger hero content animation
-    const heroContent = document.querySelector('.hero-content-animate');
+    const heroContent = document.querySelector(".hero-content-animate");
     if (heroContent) {
       requestAnimationFrame(() => {
-        heroContent.classList.add('visible');
+        heroContent.classList.add("visible");
       });
     }
 
     // Trigger hero avatar animation
-    const heroAvatar = document.querySelector('.hero-avatar-animate');
+    const heroAvatar = document.querySelector(".hero-avatar-animate");
     if (heroAvatar) {
       requestAnimationFrame(() => {
-        heroAvatar.classList.add('visible');
+        heroAvatar.classList.add("visible");
       });
     }
 
     // Trigger social icons animations
-    const socialIcons = document.querySelectorAll('.social-icon-animate');
+    const socialIcons = document.querySelectorAll(".social-icon-animate");
     socialIcons.forEach((icon) => {
       requestAnimationFrame(() => {
-        icon.classList.add('visible');
+        icon.classList.add("visible");
       });
     });
   });
 </script>
-

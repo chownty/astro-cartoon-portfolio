@@ -122,7 +122,9 @@ import { projectsConfig } from "../config/projects";
           // Move the first item to align with the viewport top
           const firstItemTop = firstItem.offsetTop;
           currentTranslateY = -firstItemTop;
-          descriptionTrack.style.transform = `translateY(${currentTranslateY}px)`;
+          if (descriptionTrack) {
+            descriptionTrack.style.transform = `translateY(${currentTranslateY}px)`;
+          }
         });
       }
     }
