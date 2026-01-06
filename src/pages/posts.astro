@@ -201,7 +201,6 @@ const allTags = Array.from(
                   {datePosts.map((post) => (
                     <article class="post-item" data-post-id={post.slug}>
                       <div class="post-summary">
-                        <div class="title-icon-left" />
                         <h3 class="post-title">
                           <a
                             href={`/posts/${post.slug}`}
@@ -209,7 +208,6 @@ const allTags = Array.from(
                           >
                             {post.title}
                           </a>
-                          <div class="title-icon-right" />
                         </h3>
                         {post.tags.length > 0 && (
                           <div class="post-tags">

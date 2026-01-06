@@ -43,11 +43,6 @@ export const siteConfig = {
         value: "chownty@gmail.com",
         link: "mailto:chownty@gmail.com",
       },
-      // phone: {
-      //   label: "Phone",
-      //   value: "+1 (234) 567-890",
-      //   link: "tel:+1 (234) 567-890",
-      // },
       location: {
         label: "Location",
         value: "San Francisco, CA",
@@ -67,16 +62,7 @@ export const siteConfig = {
   
   // Footer
   footer: {
-    copyright: "© 2026 Tom Yao. All rights reserved.",
-    links: [
-      { text: "Privacy Policy", url: "#" },
-      { text: "Terms of Service", url: "#" },
-      { text: "Sitemap", url: "#" },
-    ],
-    github: {
-      text: "Star this project on Github",
-      url: "https://github.com/tomcomtang/astro-cartoon-portfolio",
-    },
+    copyright: "© 2026 chownty studio. All rights reserved.",
   },
   
   // Posts Page
